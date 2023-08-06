@@ -1086,6 +1086,26 @@ input:checked + .toggle-bg {
   bottom: 0.25rem;
 }
 
+.left-\[\] {
+  left: ;
+}
+
+.left-\[-1\] {
+  left: -1;
+}
+
+.left-\[-1px\] {
+  left: -1px;
+}
+
+.top-\[\] {
+  top: ;
+}
+
+.top-\[-1px\] {
+  top: -1px;
+}
+
 .z-10 {
   z-index: 10;
 }
