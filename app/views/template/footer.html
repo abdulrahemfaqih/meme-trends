@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+         rel="stylesheet"
+      />
+      <title>Document</title>
+      <style>
+         /* * {
+            border: 1px solid gray;
+         } */
+         body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "poppins";
+         }
+         form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+         }
+         input {
+            width: 200px;
+         }
+         label {
+            font-size: 18px;
+         }
+         button {
+            margin: 10px 0;
+            width: 50%;
+            padding: 5px;
+            border-radius: 10px;
+            border: 1px solid gray;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="form">
+         <form action="">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="nama" />
+            <label for="pw1">Password</label>
+            <input type="password" id="pw1" />
+            <label for="pw2">Ulangi Password</label>
+            <input type="password" name="pw2" id="pw2" />
+            <div class="button"><button type="submit">Kirim</button></div>
+         </form>
+      </div>
+      <script>
+         const form = document.querySelector("form");
+         form.addEventListener("submit", (e) => {
+            e.preventDefault()
+            const pw1 = document.getElementById("pw1").value
+            const pw2 = document.getElementById("pw2").value
+            console.log(`pw 1 =  ${pw1}, pw 2 = ${pw2}`)
+
+         });
+      </script>
+   </body>
+</html>

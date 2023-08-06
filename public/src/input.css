@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.dark {
+   background: #0A1219;
+}
