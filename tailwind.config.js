@@ -7,18 +7,23 @@ module.exports = {
       "./app/views/**/**/**/*.html",
       "./node_modules/flowbite/**/*.js",
    ],
+   darkMode: "class",
    theme: {
       container: {
          center: true,
-         padding: "28px",
+         padding: "15px",
       },
       extend: {
          fontFamily: {
             poppins: "Poppins",
             jakarta: "Plus Jakarta Sans",
+            OpenSans: "Open Sans",
          },
          screens: {
             "2xl": "1260px",
+         },
+         colors: {
+            dark: "#0A1219",
          },
       },
    },
