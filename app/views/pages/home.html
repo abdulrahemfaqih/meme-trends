@@ -1,448 +1,382 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <!-- remix icon -->
-      <link
-         href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-         rel="stylesheet"
-      />
-      <!-- font -->
-      <link
-         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-         rel="stylesheet"
-      />
-      <!-- tailwidcss -->
-      <link rel="stylesheet" href="../../../dist/output.css" />
-      <!-- icon -->
-      <link
-         rel="shortcut icon"
-         href="../../../public/src/img/icon/icon-dark.svg"
-         type="image/x-icon"
-      />
-      <title>Memes Trends</title>
-      <style>
-         /* * {
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <!-- remix icon -->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+   <!-- font -->
+   <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+   <!-- tailwidcss -->
+   <link rel="stylesheet" href="../../../dist/output.css" />
+   <!-- icon -->
+   <link rel="shortcut icon" href="../../../public/src/img/icon/icon-dark.svg" type="image/x-icon" />
+   <title>Memes Trends</title>
+   <style>
+      /* * {
             border: 1px solid rgb(196, 196, 196);
          } */
-      </style>
-   </head>
+   </style>
+</head>
 
-   <body class="dark:bg-dark dark:text-slate-200 font-poppins">
-      <!-- navbar -->
-      <nav
-         class="sticky top-[-1px] py-[18px] bg-white dark:bg-dark border-b border-slate-200 dark:border-slate-800"
-         id="navbar"
-         >
+<body class="dark:bg-dark dark:text-slate-200 font-poppins">
+   <!-- navbar -->
+   <nav class="sticky top-[-1px] transition-all ease-in-out duration-300" id="navbar">
+      <div class=" bg-white/50 backdrop-blur-lg w-full  py-[18px] dark:bg-dark/50 border-b border-slate-200 dark:border-slate-800">
          <div class="container flex justify-between items-center">
             <!-- logo -->
             <div class="flex items-center gap-1 lg:gap-2">
-               <img
-                  src="../../../public/src/img/icon/icon.svg"
-                  alt="logo"
-                  class="icon-light w-[35px] lg:w-[40px]"
-               />
-               <img
-                  src="../../../public/src/img/icon/icon-dark.svg"
-                  class="icon-dark w-[35px] lg:w-[40px] hidden"
-                  alt="logo"
-               />
+               <img src="../../../public/src/img/icon/icon.svg" alt="logo" class="icon-light w-[35px] lg:w-[40px]" />
+               <img src="../../../public/src/img/icon/icon-dark.svg" class="icon-dark w-[35px] lg:w-[40px] hidden"
+                  alt="logo" />
                <h1 class="font-semibold text-[20px] lg:text-[24px]">
                   MemeTrends
                </h1>
             </div>
             <!-- end logo -->
-
             <!-- menu -->
             <div>
                <div class="flex items-center gap-6">
                   <i class="ri-search-line text-[25px]"></i>
-                  <label
-                     for="darkModeToggle"
-                     class="toogle border-2 px-2 rounded-md"
-                     >
+                  <label for="darkModeToggle" class="toogle border-2 px-2 rounded-md">
                      <i class="ri-moon-fill text-[25px] moon"></i>
-                     <input
-                        type="checkbox"
-                        id="darkModeToggle"
-                        class="hidden"
-                     />
+                     <input type="checkbox" id="darkModeToggle" class="hidden" />
                      <i class="ri-sun-fill text-[25px] sun hidden"></i>
                   </label>
                </div>
             </div>
             <!-- end menu -->
          </div>
+      </div>
+   </nav>
+   <!-- end navbar -->
 
-         <!-- menu bawah -->
-         <div
-            class="fixed bottom-0 left-[-1px] right-0 py-5 bg-white border-t border-slate-200 dark:border-slate-800 dark:bg-dark"
-            >
-            <div class="container flex justify-around items-center text-[20px]">
-               <a href="">
-                  <i class="ri-image-line"></i>
-               </a>
-               <a href="">
-                  <i class="ri-search-line"></i>
-               </a>
-               <a href="">
-                  <i class="ri-add-box-line"></i>
-               </a>
-               <a href="">
-                  <i class="ri-more-fill"></i>
-               </a>
-               <a href="">
-                  <i class="ri-user-line"></i>
-               </a>
-            </div>
-         </div>
-         <!-- end menu bawah -->
-      </nav>
-      <!-- end navbar -->
-
-      <!-- content -->
-      <section class="container pt-6 pb-24 flex justify-between flex-wrap gap-y-8">
-         <!-- card memes -->
-         <div class="w-[385px] lg:w-[380px] h-[473px] border dark:border-slate-800 rounded-md">
-            <!-- header card -->
-            <div class="flex justify-between items-center px-4 py-3 border-b dark:border-slate-800">
-               <div class="flex items-center gap-2">
-                  <img
-                     src="../../../public/src/img/profile-user/profile.jpg"
-                     alt="profile"
-                     width="35"
-                     height="35"
-                     class="rounded-full aspect-square"
-                  />
-                  <div class="text-sm">
-                     <h1 class="font-bold text-[16px]">Faqih</h1>
-                     <p>8 jam yang lalu</p>
-                  </div>
+   <!-- content -->
+   <section class="container pt-6 pb-24 flex justify-between flex-wrap gap-y-8">
+      <!-- card memes -->
+      <div class="w-[385px] lg:w-[380px] h-[473px] border dark:border-slate-800 rounded-md">
+         <!-- header card -->
+         <div class="flex justify-between items-center px-4 py-3 border-b dark:border-slate-800">
+            <div class="flex items-center gap-2">
+               <img src="../../../public/src/img/profile-user/profile.jpg" alt="profile" width="35" height="35"
+                  class="rounded-full aspect-square" />
+               <div class="text-sm">
+                  <h1 class="font-bold text-[16px]">Faqih</h1>
+                  <p>8 jam yang lalu</p>
                </div>
-               <a href="">
-                  <i class="ri-more-fill"></i>
-               </a>
             </div>
-            <!-- end header card -->
+            <a href="">
+               <i class="ri-more-fill"></i>
+            </a>
+         </div>
+         <!-- end header card -->
 
-            <!-- memes image -->
-            <div
-               style="
+         <!-- memes image -->
+         <div style="
                   background-image: url(../../../public/src/img/memes/memes1.jpg);
-               "
-               class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
-            </div>
-            <!-- end meme image -->
-
-            <!-- caption -->
-            <div class="px-6 py-2">
-               <p>wkwkwk</p>
-            </div>
-            <!-- end caption -->
-
-            <!-- footer card -->
-            <div class="flex justify-between items-center border-t dark:border-slate-800 px-6 py-3">
-               <div class="flex items-center gap-4">
-                  <div class="flex items-center gap-2">
-                     <i class="ri-heart-3-line text-[22px]"></i>
-                     <p>0</p>
-                  </div>
-                  <div class="flex items-center gap-2">
-                     <i class="ri-chat-4-line text-[22px]"></i>
-                     <p>0</p>
-                  </div>
-               </div>
-               <div>
-                  <a href=""><i class="ri-share-fill text-[20px]"></i></a>
-               </div>
-            </div>
-            <!-- end footer card -->
+               " class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
          </div>
-         <!-- end card memes -->
-         <div class="w-[385px] lg:w-[380px] h-[473px] border dark:border-slate-800 rounded-md">
-            <!-- header card -->
-            <div class="flex justify-between items-center px-4 py-3 border-b dark:border-slate-800">
-               <div class="flex items-center gap-2">
-                  <img
-                     src="../../../public/src/img/profile-user/profile.jpg"
-                     alt="profile"
-                     width="35"
-                     height="35"
-                     class="rounded-full aspect-square"
-                  />
-                  <div class="text-sm">
-                     <h1 class="font-bold text-[16px]">Faqih</h1>
-                     <p>8 jam yang lalu</p>
-                  </div>
-               </div>
-               <a href="">
-                  <i class="ri-more-fill"></i>
-               </a>
-            </div>
-            <!-- end header card -->
+         <!-- end meme image -->
 
-            <!-- memes image -->
-            <div
-               style="
+         <!-- caption -->
+         <div class="px-6 py-2">
+            <p>wkwkwk</p>
+         </div>
+         <!-- end caption -->
+
+         <!-- footer card -->
+         <div class="flex justify-between items-center border-t dark:border-slate-800 px-6 py-3">
+            <div class="flex items-center gap-4">
+               <div class="flex items-center gap-2">
+                  <i class="ri-heart-3-line text-[22px]"></i>
+                  <p>0</p>
+               </div>
+               <div class="flex items-center gap-2">
+                  <i class="ri-chat-4-line text-[22px]"></i>
+                  <p>0</p>
+               </div>
+            </div>
+            <div>
+               <a href=""><i class="ri-share-fill text-[20px]"></i></a>
+            </div>
+         </div>
+         <!-- end footer card -->
+      </div>
+      <!-- end card memes -->
+      <div class="w-[385px] lg:w-[380px] h-[473px] border dark:border-slate-800 rounded-md">
+         <!-- header card -->
+         <div class="flex justify-between items-center px-4 py-3 border-b dark:border-slate-800">
+            <div class="flex items-center gap-2">
+               <img src="../../../public/src/img/profile-user/profile.jpg" alt="profile" width="35" height="35"
+                  class="rounded-full aspect-square" />
+               <div class="text-sm">
+                  <h1 class="font-bold text-[16px]">Faqih</h1>
+                  <p>8 jam yang lalu</p>
+               </div>
+            </div>
+            <a href="">
+               <i class="ri-more-fill"></i>
+            </a>
+         </div>
+         <!-- end header card -->
+
+         <!-- memes image -->
+         <div style="
                   background-image: url(../../../public/src/img/memes/memes2.jpg);
-               "
-               class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
-            </div>
-            <!-- end meme image -->
-
-            <!-- caption -->
-            <div class="px-6 py-2">
-               <p>wkwkwk</p>
-            </div>
-            <!-- end caption -->
-
-            <!-- footer card -->
-            <div class="flex justify-between items-center border-t dark:border-slate-800 px-6 py-3">
-               <div class="flex items-center gap-4">
-                  <div class="flex items-center gap-2">
-                     <i class="ri-heart-3-line text-[22px]"></i>
-                     <p>0</p>
-                  </div>
-                  <div class="flex items-center gap-2">
-                     <i class="ri-chat-4-line text-[22px]"></i>
-                     <p>0</p>
-                  </div>
-               </div>
-               <div>
-                  <a href=""><i class="ri-share-fill text-[20px]"></i></a>
-               </div>
-            </div>
-            <!-- end footer card -->
+               " class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
          </div>
-         <!-- end card memes -->
-         <div class="w-[385px] lg:w-[380px] h-[473px] border dark:border-slate-800 rounded-md">
-            <!-- header card -->
-            <div class="flex justify-between items-center px-4 py-3 border-b dark:border-slate-800">
-               <div class="flex items-center gap-2">
-                  <img
-                     src="../../../public/src/img/profile-user/profile.jpg"
-                     alt="profile"
-                     width="35"
-                     height="35"
-                     class="rounded-full aspect-square"
-                  />
-                  <div class="text-sm">
-                     <h1 class="font-bold text-[16px]">Faqih</h1>
-                     <p>8 jam yang lalu</p>
-                  </div>
-               </div>
-               <a href="">
-                  <i class="ri-more-fill"></i>
-               </a>
-            </div>
-            <!-- end header card -->
+         <!-- end meme image -->
 
-            <!-- memes image -->
-            <div
-               style="
+         <!-- caption -->
+         <div class="px-6 py-2">
+            <p>wkwkwk</p>
+         </div>
+         <!-- end caption -->
+
+         <!-- footer card -->
+         <div class="flex justify-between items-center border-t dark:border-slate-800 px-6 py-3">
+            <div class="flex items-center gap-4">
+               <div class="flex items-center gap-2">
+                  <i class="ri-heart-3-line text-[22px]"></i>
+                  <p>0</p>
+               </div>
+               <div class="flex items-center gap-2">
+                  <i class="ri-chat-4-line text-[22px]"></i>
+                  <p>0</p>
+               </div>
+            </div>
+            <div>
+               <a href=""><i class="ri-share-fill text-[20px]"></i></a>
+            </div>
+         </div>
+         <!-- end footer card -->
+      </div>
+      <!-- end card memes -->
+      <div class="w-[385px] lg:w-[380px] h-[473px] border dark:border-slate-800 rounded-md">
+         <!-- header card -->
+         <div class="flex justify-between items-center px-4 py-3 border-b dark:border-slate-800">
+            <div class="flex items-center gap-2">
+               <img src="../../../public/src/img/profile-user/profile.jpg" alt="profile" width="35" height="35"
+                  class="rounded-full aspect-square" />
+               <div class="text-sm">
+                  <h1 class="font-bold text-[16px]">Faqih</h1>
+                  <p>8 jam yang lalu</p>
+               </div>
+            </div>
+            <a href="">
+               <i class="ri-more-fill"></i>
+            </a>
+         </div>
+         <!-- end header card -->
+
+         <!-- memes image -->
+         <div style="
                   background-image: url(../../../public/src/img/memes/memes3.png);
-               "
-               class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
-            </div>
-            <!-- end meme image -->
-
-            <!-- caption -->
-            <div class="px-6 py-2">
-               <p>wkwkwk</p>
-            </div>
-            <!-- end caption -->
-
-            <!-- footer card -->
-            <div class="flex justify-between items-center border-t dark:border-slate-800 px-6 py-3">
-               <div class="flex items-center gap-4">
-                  <div class="flex items-center gap-2">
-                     <i class="ri-heart-3-line text-[22px]"></i>
-                     <p>0</p>
-                  </div>
-                  <div class="flex items-center gap-2">
-                     <i class="ri-chat-4-line text-[22px]"></i>
-                     <p>0</p>
-                  </div>
-               </div>
-               <div>
-                  <a href=""><i class="ri-share-fill text-[20px]"></i></a>
-               </div>
-            </div>
-            <!-- end footer card -->
+               " class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
          </div>
-         <!-- end card memes -->
-         <div class="w-[385px] lg:w-[380px] h-[473px] border dark:border-slate-800 rounded-md">
-            <!-- header card -->
-            <div class="flex justify-between items-center px-4 py-3 border-b dark:border-slate-800">
-               <div class="flex items-center gap-2">
-                  <img
-                     src="../../../public/src/img/profile-user/profile.jpg"
-                     alt="profile"
-                     width="35"
-                     height="35"
-                     class="rounded-full aspect-square"
-                  />
-                  <div class="text-sm">
-                     <h1 class="font-bold text-[16px]">Faqih</h1>
-                     <p>8 jam yang lalu</p>
-                  </div>
-               </div>
-               <a href="">
-                  <i class="ri-more-fill"></i>
-               </a>
-            </div>
-            <!-- end header card -->
+         <!-- end meme image -->
 
-            <!-- memes image -->
-            <div
-               style="
+         <!-- caption -->
+         <div class="px-6 py-2">
+            <p>wkwkwk</p>
+         </div>
+         <!-- end caption -->
+
+         <!-- footer card -->
+         <div class="flex justify-between items-center border-t dark:border-slate-800 px-6 py-3">
+            <div class="flex items-center gap-4">
+               <div class="flex items-center gap-2">
+                  <i class="ri-heart-3-line text-[22px]"></i>
+                  <p>0</p>
+               </div>
+               <div class="flex items-center gap-2">
+                  <i class="ri-chat-4-line text-[22px]"></i>
+                  <p>0</p>
+               </div>
+            </div>
+            <div>
+               <a href=""><i class="ri-share-fill text-[20px]"></i></a>
+            </div>
+         </div>
+         <!-- end footer card -->
+      </div>
+      <!-- end card memes -->
+      <div class="w-[385px] lg:w-[380px] h-[473px] border dark:border-slate-800 rounded-md">
+         <!-- header card -->
+         <div class="flex justify-between items-center px-4 py-3 border-b dark:border-slate-800">
+            <div class="flex items-center gap-2">
+               <img src="../../../public/src/img/profile-user/profile.jpg" alt="profile" width="35" height="35"
+                  class="rounded-full aspect-square" />
+               <div class="text-sm">
+                  <h1 class="font-bold text-[16px]">Faqih</h1>
+                  <p>8 jam yang lalu</p>
+               </div>
+            </div>
+            <a href="">
+               <i class="ri-more-fill"></i>
+            </a>
+         </div>
+         <!-- end header card -->
+
+         <!-- memes image -->
+         <div style="
                   background-image: url(../../../public/src/img/memes/memes3.png);
-               "
-               class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
-            </div>
-            <!-- end meme image -->
-
-            <!-- caption -->
-            <div class="px-6 py-2">
-               <p>wkwkwk</p>
-            </div>
-            <!-- end caption -->
-
-            <!-- footer card -->
-            <div class="flex justify-between items-center border-t dark:border-slate-800 px-6 py-3">
-               <div class="flex items-center gap-4">
-                  <div class="flex items-center gap-2">
-                     <i class="ri-heart-3-line text-[22px]"></i>
-                     <p>0</p>
-                  </div>
-                  <div class="flex items-center gap-2">
-                     <i class="ri-chat-4-line text-[22px]"></i>
-                     <p>0</p>
-                  </div>
-               </div>
-               <div>
-                  <a href=""><i class="ri-share-fill text-[20px]"></i></a>
-               </div>
-            </div>
-            <!-- end footer card -->
+               " class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
          </div>
-         <!-- end card memes -->
-         <div class="w-[385px] lg:w-[380px] h-[473px] border dark:border-slate-800 rounded-md">
-            <!-- header card -->
-            <div class="flex justify-between items-center px-4 py-3 border-b dark:border-slate-800">
-               <div class="flex items-center gap-2">
-                  <img
-                     src="../../../public/src/img/profile-user/profile.jpg"
-                     alt="profile"
-                     width="35"
-                     height="35"
-                     class="rounded-full aspect-square"
-                  />
-                  <div class="text-sm">
-                     <h1 class="font-bold text-[16px]">Faqih</h1>
-                     <p>8 jam yang lalu</p>
-                  </div>
-               </div>
-               <a href="">
-                  <i class="ri-more-fill"></i>
-               </a>
-            </div>
-            <!-- end header card -->
+         <!-- end meme image -->
 
-            <!-- memes image -->
-            <div
-               style="
+         <!-- caption -->
+         <div class="px-6 py-2">
+            <p>wkwkwk</p>
+         </div>
+         <!-- end caption -->
+
+         <!-- footer card -->
+         <div class="flex justify-between items-center border-t dark:border-slate-800 px-6 py-3">
+            <div class="flex items-center gap-4">
+               <div class="flex items-center gap-2">
+                  <i class="ri-heart-3-line text-[22px]"></i>
+                  <p>0</p>
+               </div>
+               <div class="flex items-center gap-2">
+                  <i class="ri-chat-4-line text-[22px]"></i>
+                  <p>0</p>
+               </div>
+            </div>
+            <div>
+               <a href=""><i class="ri-share-fill text-[20px]"></i></a>
+            </div>
+         </div>
+         <!-- end footer card -->
+      </div>
+      <!-- end card memes -->
+      <div class="w-[385px] lg:w-[380px] h-[473px] border dark:border-slate-800 rounded-md">
+         <!-- header card -->
+         <div class="flex justify-between items-center px-4 py-3 border-b dark:border-slate-800">
+            <div class="flex items-center gap-2">
+               <img src="../../../public/src/img/profile-user/profile.jpg" alt="profile" width="35" height="35"
+                  class="rounded-full aspect-square" />
+               <div class="text-sm">
+                  <h1 class="font-bold text-[16px]">Faqih</h1>
+                  <p>8 jam yang lalu</p>
+               </div>
+            </div>
+            <a href="">
+               <i class="ri-more-fill"></i>
+            </a>
+         </div>
+         <!-- end header card -->
+
+         <!-- memes image -->
+         <div style="
                   background-image: url(../../../public/src/img/memes/memes2.jpg);
-               "
-               class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
-            </div>
-            <!-- end meme image -->
-
-            <!-- caption -->
-            <div class="px-6 py-2">
-               <p>wkwkwk</p>
-            </div>
-            <!-- end caption -->
-
-            <!-- footer card -->
-            <div class="flex justify-between items-center border-t dark:border-slate-800 px-6 py-3">
-               <div class="flex items-center gap-4">
-                  <div class="flex items-center gap-2">
-                     <i class="ri-heart-3-line text-[22px]"></i>
-                     <p>0</p>
-                  </div>
-                  <div class="flex items-center gap-2">
-                     <i class="ri-chat-4-line text-[22px]"></i>
-                     <p>0</p>
-                  </div>
-               </div>
-               <div>
-                  <a href=""><i class="ri-share-fill text-[20px]"></i></a>
-               </div>
-            </div>
-            <!-- end footer card -->
+               " class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
          </div>
-         <!-- end card memes -->
-         <div class="w-[385px] lg:w-[380px] h-[473px] border dark:border-slate-800 rounded-md">
-            <!-- header card -->
-            <div class="flex justify-between items-center px-4 py-3 border-b dark:border-slate-800">
-               <div class="flex items-center gap-2">
-                  <img
-                     src="../../../public/src/img/profile-user/profile.jpg"
-                     alt="profile"
-                     width="35"
-                     height="35"
-                     class="rounded-full aspect-square"
-                  />
-                  <div class="text-sm">
-                     <h1 class="font-bold text-[16px]">Faqih</h1>
-                     <p>8 jam yang lalu</p>
-                  </div>
-               </div>
-               <a href="">
-                  <i class="ri-more-fill"></i>
-               </a>
-            </div>
-            <!-- end header card -->
+         <!-- end meme image -->
 
-            <!-- memes image -->
-            <div
-               style="
+         <!-- caption -->
+         <div class="px-6 py-2">
+            <p>wkwkwk</p>
+         </div>
+         <!-- end caption -->
+
+         <!-- footer card -->
+         <div class="flex justify-between items-center border-t dark:border-slate-800 px-6 py-3">
+            <div class="flex items-center gap-4">
+               <div class="flex items-center gap-2">
+                  <i class="ri-heart-3-line text-[22px]"></i>
+                  <p>0</p>
+               </div>
+               <div class="flex items-center gap-2">
+                  <i class="ri-chat-4-line text-[22px]"></i>
+                  <p>0</p>
+               </div>
+            </div>
+            <div>
+               <a href=""><i class="ri-share-fill text-[20px]"></i></a>
+            </div>
+         </div>
+         <!-- end footer card -->
+      </div>
+      <!-- end card memes -->
+      <div class="w-[385px] lg:w-[380px] h-[473px] border dark:border-slate-800 rounded-md">
+         <!-- header card -->
+         <div class="flex justify-between items-center px-4 py-3 border-b dark:border-slate-800">
+            <div class="flex items-center gap-2">
+               <img src="../../../public/src/img/profile-user/profile.jpg" alt="profile" width="35" height="35"
+                  class="rounded-full aspect-square" />
+               <div class="text-sm">
+                  <h1 class="font-bold text-[16px]">Faqih</h1>
+                  <p>8 jam yang lalu</p>
+               </div>
+            </div>
+            <a href="">
+               <i class="ri-more-fill"></i>
+            </a>
+         </div>
+         <!-- end header card -->
+
+         <!-- memes image -->
+         <div style="
                   background-image: url(../../../public/src/img/memes/memes1.jpg);
-               "
-               class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
-            </div>
-            <!-- end meme image -->
-
-            <!-- caption -->
-            <div class="px-6 py-2">
-               <p>wkwkwk</p>
-            </div>
-            <!-- end caption -->
-
-            <!-- footer card -->
-            <div class="flex justify-between items-center border-t dark:border-slate-800 px-6 py-3">
-               <div class="flex items-center gap-4">
-                  <div class="flex items-center gap-2">
-                     <i class="ri-heart-3-line text-[22px]"></i>
-                     <p>0</p>
-                  </div>
-                  <div class="flex items-center gap-2">
-                     <i class="ri-chat-4-line text-[22px]"></i>
-                     <p>0</p>
-                  </div>
-               </div>
-               <div>
-                  <a href=""><i class="ri-share-fill text-[20px]"></i></a>
-               </div>
-            </div>
-            <!-- end footer card -->
+               " class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
          </div>
-         <!-- end card memes -->
-      </section>
-      <!-- end content -->
-   </body>
-   <script src="../../../public/src/js/toogle.js"></script>
-   <script src="../../../public/src/js/navbar.js"></script>
+         <!-- end meme image -->
+
+         <!-- caption -->
+         <div class="px-6 py-2">
+            <p>wkwkwk</p>
+         </div>
+         <!-- end caption -->
+
+         <!-- footer card -->
+         <div class="flex justify-between items-center border-t dark:border-slate-800 px-6 py-3">
+            <div class="flex items-center gap-4">
+               <div class="flex items-center gap-2">
+                  <i class="ri-heart-3-line text-[22px]"></i>
+                  <p>0</p>
+               </div>
+               <div class="flex items-center gap-2">
+                  <i class="ri-chat-4-line text-[22px]"></i>
+                  <p>0</p>
+               </div>
+            </div>
+            <div>
+               <a href=""><i class="ri-share-fill text-[20px]"></i></a>
+            </div>
+         </div>
+         <!-- end footer card -->
+      </div>
+      <!-- end card memes -->
+   </section>
+   <!-- end content -->
+
+   <!-- footer -->
+   <div class="fixed bottom-0 left-[-1px] right-0 py-5 bg-white/50 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 dark:bg-dark/50 transition-all ease-in-out duration-300" id="footer">
+      <div class="container flex justify-around items-center text-[20px]">
+         <a href="">
+            <i class="ri-image-line"></i>
+         </a>
+         <a href="">
+            <i class="ri-search-line"></i>
+         </a>
+         <a href="">
+            <i class="ri-add-box-line"></i>
+         </a>
+         <a href="">
+            <i class="ri-more-fill"></i>
+         </a>
+         <a href="">
+            <i class="ri-user-line"></i>
+         </a>
+      </div>
+   </div>
+   <!-- end footer -->
+</body>
+<script src="../../../public/src/js/toogle.js"></script>
+<script src="../../../public/src/js/navbarFooter.js"></script>
+
 </html>
