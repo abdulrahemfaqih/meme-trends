@@ -2,4 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+   .text-modal-icon {
+      @apply text-[20px] text-gray-700 dark:text-gray-200;
+   }
 
+   .text-modal {
+      @apply text-base text-gray-700 dark:text-gray-200;
+   }
+}
+
+@layer utilities {
+   .all-center {
+      @apply flex justify-center items-center;
+   }
+
+   @keyframes floatL {
+      0% {
+         transform: translateX(0);
+      }
+      50% {
+         transform: translateX(20px);
+      }
+      100% {
+         transform: translateX(0);
+      }
+   }
+
+   @keyframes floatR {
+      0% {
+         transform: translateX(0);
+      }
+      50% {
+         transform: translateX(-20px);
+      }
+      100% {
+         transform: translateX(0);
+      }
+   }
+
+   @keyframes waves {
+      0% {
+         transform: rotate(0deg);
+      }
+      50% {
+         transform: rotate(2deg);
+      }
+      100% {
+         transform: rotate(0deg);
+      }
+   }
+
+   @keyframes swipeUp {
+      0% {
+         top: -100%;
+         opacity: 0.5;
+      }
+      100% {
+         top: 26%;
+         opacity: 1;
+      }
+   }
+
+   .floating1 {
+      position: absolute;
+      left: 20%;
+      animation:
+         swipeUp 5000ms forwards,
+         floatL 3000ms infinite;
+      transition: ease-out 0.3s;
+   }
+
+   .floating2 {
+      position: absolute;
+      right: 20%;
+      animation:
+         swipeUp 5000ms forwards,
+         floatR 3000ms infinite;
+      transition: ease-out 0.3s;
+   }
+   .floating-m-1 {
+      position: absolute;
+      left: 10%;
+      animation:
+         swipeUp 5000ms forwards,
+         floatL 3000ms infinite;
+      transition: ease-out 0.3s;
+   }
+
+   .floating-m-2 {
+      position: absolute;
+      right: 20px;
+      animation:
+         swipeUp 5000ms forwards,
+         floatR 3000ms infinite;
+      transition: ease-out 0.3s;
+   }
+
+   .floating3 {
+      animation: waves 3000ms infinite;
+   }
+}

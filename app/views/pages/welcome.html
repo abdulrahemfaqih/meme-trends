@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <!-- remix icon -->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+   <!-- font -->
+   <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+   <!-- tailwidcss -->
+   <link rel="stylesheet" href="../../../dist/output.css" />
+   <!-- icon -->
+   <link rel="shortcut icon" href="../../../public/src/img/icon/icon-dark.svg" type="image/x-icon" />
+   <title>Meme Verse</title>
+   <style>
+      /* * {
+            border: 1px solid rgb(196, 196, 196);
+         } */
+   </style>
+</head>
+
+<body class="dark:bg-dark dark:text-slate-200 font-poppins">
+   <!-- * section navbar -->
+   <nav class="sticky top-[-1px] transition-all ease-in-out duration-300" id="navbar">
+      <div class=" bg-white/50 backdrop-blur-lg w-full  py-[18px] dark:bg-dark/50 border-b dark:border-gray-700">
+         <div class="container flex justify-between items-center">
+            <!-- logo -->
+            <div class="flex items-center gap-1 lg:gap-2">
+               <img src="../../../public/src/img/icon/icon.svg" alt="logo" class="icon-light w-[35px] lg:w-[40px]" />
+               <img src="../../../public/src/img/icon/icon-dark.svg" class="icon-dark w-[35px] lg:w-[40px] hidden"
+                  alt="logo" />
+               <h1 class="font-semibold text-[20px] lg:text-[24px]">
+                  MemeVerse
+               </h1>
+            </div>
+            <!-- end logo -->
+            <!-- menu -->
+            <div>
+               <div class="flex items-center gap-6">
+                  <!-- modal search-->
+                  <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" type="button">
+                     <i class="ri-search-line text-[22px]"></i>
+                  </button>
+                  <!-- end modal search -->
+                  <label for="darkModeToggle" class="toogle border-2 px-2 rounded-md">
+                     <i class="ri-moon-fill text-[25px] moon"></i>
+                     <input type="checkbox" id="darkModeToggle" class="hidden" />
+                     <i class="ri-sun-fill text-[25px] sun hidden"></i>
+                  </label>
+               </div>
+            </div>
+            <!-- end menu -->
+         </div>
+      </div>
+   </nav>
+   <!-- * end section navbar -->
+
+   <!-- *section hero -->
+   <section class="container pt-28 lg:pt-4 pb-8 dark:border-gray-700">
+      <div class="flex items-center justify-center  gap-12 max-md:hidden ">
+         <img src="../../../public/src/img/memes/memes1.jpg" alt=""
+            class="floating1 w-[19%]   rounded-lg shadow-xl border dark:border-gray-700">
+         <img src="../../../public/src/img/memes/memes2.jpg" alt=""
+            class=" floating3 w-[19%]  rounded-lg shadow-xl border dark:border-gray-700">
+         <img src="../../../public/src/img/memes/memes3.png" alt=""
+            class="floating2 w-[19%]  rounded-lg shadow-xl border dark:border-gray-700">
+      </div>
+      <div class="flex flex-col justify-center items-center gap-y-8 lg:hidden">
+         <div class="all-center">
+            <img src="../../../public/src/img/memes/memes2.jpg" alt=""
+               class=" floating3 w-[45%]  rounded-lg shadow-xl border dark:border-gray-700">
+         </div>
+         <div class="flex justify-around items-center">
+            <img src="../../../public/src/img/memes/memes1.jpg" alt=""
+               class="floating-m-1 w-[30%]  rounded-lg shadow-xl border dark:border-gray-700">
+            <img src="../../../public/src/img/memes/memes3.png" alt=""
+               class="floating-m-2 w-[30%] h-[25%] rounded-lg shadow-xl border dark:border-gray-700">
+         </div>
+      </div>
+      <div class="flex flex-col justify-center items-center pt-10 pb-5">
+         <h1 class="font-bold text-3xl text-darkBlue dark:text-softBlue">MetaVerse</h1>
+         <p class="text-center text-lg font-normal p-3 ">Menyediakan Kumpulan memes terupdate dan terhubung dengan
+            pengguna lainnya</p>
+      </div>
+      <div class="all-center gap-6">
+         <div class="all-center gap-2">
+            <i class="ri-group-fill"></i>
+            <p>10 Penguna</p>
+         </div>
+         <div class="all-center gap-2">
+            <i class="ri-image-fill"></i>
+            <p>6 Postingan</p>
+         </div>
+      </div>
+      <div class="all-center flex-col">
+         <a href="home.html"
+            class="flex items-center gap-2 mt-4  border-2 dark:border-gray-700 dark:bg-softBlue py-1 px-2 rounded-3xl shadow-md ">
+            <i class="ri-rocket-2-fill"></i>
+            <p class="text-sm">Mulai Menjelajah</p>
+         </a>
+         <div class="flex items-center gap-2 m-2">
+            <div class="text-sm border dark:bordr-gray-700 rounded-2xl shadow-md py-2 px-3">Daftar</div>
+            <div class="text-sm border dark:bordr-gray-700 rounded-2xl shadow-md py-2 px-3">Masuk</div>
+         </div>
+      </div>
+   </section>
+
+   <!-- *end section hero -->
+</body>
+<script src="../../../public/src/js/toogle.js"></script>
+<script src="../../../node_modules/flowbite/dist/flowbite.min.js"></script>
+
+</html>
