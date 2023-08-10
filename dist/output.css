@@ -1763,16 +1763,20 @@ input:checked + .toggle-bg {
   padding-top: 0.5rem;
 }
 
-.pt-20 {
-  padding-top: 5rem;
+.pt-28 {
+  padding-top: 7rem;
 }
 
 .pt-6 {
   padding-top: 1.5rem;
 }
 
-.pt-28 {
-  padding-top: 7rem;
+.pt-20 {
+  padding-top: 5rem;
+}
+
+.pt-16 {
+  padding-top: 4rem;
 }
 
 .text-center {
@@ -1817,6 +1821,15 @@ input:checked + .toggle-bg {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-\[15px\] {
+  font-size: 15px;
 }
 
 .font-bold {
@@ -1891,6 +1904,14 @@ input:checked + .toggle-bg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\[15px\]\] {
+  color: [15px];
+}
+
+.text-\[\] {
+  color: ;
 }
 
 .opacity-0 {
@@ -2399,6 +2420,10 @@ input:checked + .toggle-bg {
 
   .lg\:pt-4 {
     padding-top: 1rem;
+  }
+
+  .lg\:pt-20 {
+    padding-top: 5rem;
   }
 
   .lg\:text-\[24px\] {
