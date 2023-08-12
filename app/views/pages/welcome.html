@@ -15,6 +15,13 @@
    <!-- icon -->
    <link rel="shortcut icon" href="../../../public/src/img/icon/icon-dark.svg" type="image/x-icon" />
    <title>Meme Verse</title>
+   <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+         document.documentElement.classList.add('dark')
+      } else {
+         document.documentElement.classList.remove('dark')
+      }
+   </script>
    <style>
       /* * {
             border: 1px solid rgb(196, 196, 196);
@@ -25,8 +32,8 @@
 <body class="dark:bg-dark dark:text-slate-200 font-poppins">
    <!-- * section navbar -->
    <nav class="sticky top-[-1px] transition-all ease-in-out duration-300" id="navbar">
-      <div class=" bg-white/50 backdrop-blur-lg w-full  py-[18px] dark:bg-dark/50 border-b dark:border-gray-700">
-         <div class="container flex justify-between items-center">
+      <div class=" bg-white/50 backdrop-blur-lg w-full  py-[18px] dark:bg-dark/50">
+         <div class="container flex items-center justify-between">
             <!-- logo -->
             <div class="flex items-center gap-1 lg:gap-2">
                <img src="../../../public/src/img/icon/icon.svg" alt="logo" class="icon-light w-[35px] lg:w-[40px]" />
@@ -45,10 +52,10 @@
                      <i class="ri-search-line text-[22px]"></i>
                   </button>
                   <!-- end modal search -->
-                  <label for="darkModeToggle" class="toogle border-2 px-2 rounded-md">
-                     <i class="ri-moon-fill text-[25px] moon"></i>
+                  <label for="darkModeToggle" class="px-2 border-2 rounded-md toogle">
+                     <i class="ri-moon-fill text-[20px] moon"></i>
                      <input type="checkbox" id="darkModeToggle" class="hidden" />
-                     <i class="ri-sun-fill text-[25px] sun hidden"></i>
+                     <i class="ri-sun-fill text-[20px] sun hidden"></i>
                   </label>
                </div>
             </div>
@@ -59,51 +66,51 @@
    <!-- * end section navbar -->
 
    <!-- *section hero -->
-   <section class="container pt-28 lg:pt-4 pb-8 dark:border-gray-700">
-      <div class="flex items-center justify-center  gap-12 max-md:hidden ">
+   <section class="container pt-4 pb-8 lg:pt-4 dark:border-gray-700">
+      <div class="flex items-center justify-center gap-12 max-md:hidden ">
          <img src="../../../public/src/img/memes/memes1.jpg" alt=""
-            class="floating1 w-[19%]   rounded-lg shadow-xl border dark:border-gray-700">
+            class="floating1 w-[19%] rounded-lg shadow-xl border dark:border-gray-700">
          <img src="../../../public/src/img/memes/memes2.jpg" alt=""
-            class=" floating3 w-[19%]  rounded-lg shadow-xl border dark:border-gray-700">
+            class="animation-hero-img w-[19%]  rounded-lg shadow-xl border dark:border-gray-700">
          <img src="../../../public/src/img/memes/memes3.png" alt=""
             class="floating2 w-[19%]  rounded-lg shadow-xl border dark:border-gray-700">
       </div>
-      <div class="flex flex-col justify-center items-center gap-y-8 lg:hidden">
+      <div class="flex flex-col items-center justify-center gap-y-8 lg:hidden">
          <div class="all-center">
             <img src="../../../public/src/img/memes/memes2.jpg" alt=""
-               class=" floating3 w-[45%]  rounded-lg shadow-xl border dark:border-gray-700">
+               class="animation-hero-img floating3 w-[45%]  rounded-lg shadow-xl border dark:border-gray-700">
          </div>
-         <div class="flex justify-around items-center">
+         <div class="flex items-center justify-around">
             <img src="../../../public/src/img/memes/memes1.jpg" alt=""
                class="floating-m-1 w-[30%]  rounded-lg shadow-xl border dark:border-gray-700">
             <img src="../../../public/src/img/memes/memes3.png" alt=""
                class="floating-m-2 w-[30%] h-[25%] rounded-lg shadow-xl border dark:border-gray-700">
          </div>
       </div>
-      <div class="flex flex-col justify-center items-center pt-10 pb-5">
-         <h1 class="font-bold text-3xl text-darkBlue dark:text-softBlue">MetaVerse</h1>
-         <p class="text-center text-lg font-normal p-3 ">Menyediakan Kumpulan memes terupdate dan terhubung dengan
+      <div class="flex flex-col items-center justify-center pt-6 pb-5 lg:pt-20 ">
+         <h1 class="text-3xl font-bold text-darkBlue dark:text-softBlue animation-h1">MemeVerse</h1>
+         <p class="text-center text-[14px] font-normal p-3 ">Menyediakan Kumpulan memes terupdate dan terhubung dengan
             pengguna lainnya</p>
       </div>
-      <div class="all-center gap-6">
-         <div class="all-center gap-2">
-            <i class="ri-group-fill"></i>
-            <p>10 Penguna</p>
+      <div class="gap-6 all-center">
+         <div class="gap-2 all-center">
+            <i class="ri-group-fill "></i>
+            <p class="text-sm">10 Penguna</p>
          </div>
-         <div class="all-center gap-2">
+         <div class="gap-2 all-center">
             <i class="ri-image-fill"></i>
-            <p>6 Postingan</p>
+            <p class="text-sm">6 Postingan</p>
          </div>
       </div>
-      <div class="all-center flex-col">
+      <div class="flex-col all-center">
          <a href="home.html"
-            class="flex items-center gap-2 mt-4  border-2 dark:border-gray-700 dark:bg-softBlue py-1 px-2 rounded-3xl shadow-md ">
+            class="flex items-center gap-2 px-3 py-2 mt-4 border-2 shadow-md dark:border-gray-700 dark:bg-softBlue rounded-3xl ">
             <i class="ri-rocket-2-fill"></i>
-            <p class="text-sm">Mulai Menjelajah</p>
+            <p class="text-base">Mulai Menjelajah</p>
          </a>
          <div class="flex items-center gap-2 m-2">
-            <div class="text-sm border dark:bordr-gray-700 rounded-2xl shadow-md py-2 px-3">Daftar</div>
-            <div class="text-sm border dark:bordr-gray-700 rounded-2xl shadow-md py-2 px-3">Masuk</div>
+            <div class="text-[15px] border dark:bordr-gray-700 rounded-2xl shadow-md py-2 px-3">Daftar</div>
+            <div class="text-[15px] border dark:bordr-gray-700 rounded-2xl shadow-md py-2 px-3">Masuk</div>
          </div>
       </div>
    </section>
