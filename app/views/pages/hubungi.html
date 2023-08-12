@@ -1,4 +1,4 @@
-<!doctype html >
+<!doctype html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -15,17 +15,22 @@
    <!-- icon -->
    <link rel="shortcut icon" href="../../../public/src/img/icon/icon-dark.svg" type="image/x-icon" />
    <title>Meme Verse</title>
+   <!-- localStorage darkmode -->
    <script>
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-         document.documentElement.classList.add('dark')
+      if (
+         localStorage.theme === "dark" ||
+         (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+         document.documentElement.classList.add("dark");
       } else {
-         document.documentElement.classList.remove('dark')
+         document.documentElement.classList.remove("dark");
       }
    </script>
    <style>
       /* * {
-            border: 1px solid rgb(196, 196, 196);
-         } */
+         border: 1px solid rgb(196, 196, 196);
+      } */
    </style>
 </head>
 
@@ -33,11 +38,11 @@
    <!-- * section navbar -->
    <nav class="sticky top-[-1px] transition-all ease-in-out duration-300" id="navbar">
       <div
-         class=" bg-white/70 backdrop-blur-lg w-full py-[15px] lg:py-[18px] dark:bg-dark/50 border-b border-slate-200 dark:border-slate-800">
+         class="bg-white/70 backdrop-blur-lg w-full py-[15px] lg:py-[18px] dark:bg-dark/50 border-b dark:border-slate-800 ">
          <div class="container flex items-center justify-between">
             <!-- logo -->
             <div class="flex items-center gap-1 lg:gap-2">
-               <img src="../../../public/src/img/icon/icon.svg" alt="logo" class="icon-light w-[35px] lg:w-[40px]" />
+               <img src="../../../public/src/img/icon/icon-dark.svg" alt="logo" class="icon-light w-[35px] lg:w-[40px]" />
                <img src="../../../public/src/img/icon/icon-dark.svg" class="icon-dark w-[35px] lg:w-[40px] hidden"
                   alt="logo" />
                <h1 class="font-semibold text-[20px] lg:text-[24px]">
@@ -68,309 +73,49 @@
    <!-- * end section navbar -->
 
    <!-- * section content -->
-   <section class="container flex flex-wrap justify-between pt-6 pb-24 gap-y-8">
-      <!-- card memes -->
-      <div class="w-[385px] lg:w-[380px] h-[473px] border-2  dark:border-slate-800 rounded-md">
-         <!-- header card -->
-         <div class="flex items-center justify-between px-4 py-3 border-b dark:border-slate-800">
-            <div class="flex items-center gap-2">
-               <img src="../../../public/src/img/profile-user/profile.jpg" alt="profile" width="35" height="35"
-                  class="rounded-full aspect-square" />
-               <div class="text-sm">
-                  <h1 class="font-bold text-[16px]">Faqih</h1>
-                  <p>8 jam yang lalu</p>
-               </div>
-            </div>
-            <button data-modal-target="modal-more-memes" data-modal-toggle="modal-more-memes" type="button">
-               <i class="ri-more-fill"></i>
-            </button>
-         </div>
-         <!-- end header card -->
-
-         <!-- memes image -->
-         <div style="
-                  background-image: url(../../../public/src/img/memes/memes1.jpg);
-               " class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
-         </div>
-         <!-- end meme image -->
-
-         <!-- caption -->
-         <div class="px-6 py-2">
-            <p>wkwkwk</p>
-         </div>
-         <!-- end caption -->
-
-         <!-- footer card -->
-         <div class="flex items-center justify-between px-6 py-3 border-t dark:border-slate-800">
-            <div class="flex items-center gap-4">
-               <div class="flex items-center gap-2">
-                  <i class="ri-heart-3-line text-[22px]"></i>
-                  <p>0</p>
-               </div>
-               <div class="flex items-center gap-2">
-                  <i class="ri-chat-4-line text-[22px]"></i>
-                  <p>0</p>
-               </div>
-            </div>
-            <div>
-               <a href=""><i class="ri-share-fill text-[20px]"></i></a>
-            </div>
-         </div>
-         <!-- end footer card -->
+   <section class="container max-w-screen-md mx-auto">
+      <div>
+         <h1 class="pt-4 pb-3 mx-auto text-2xl font-bold text-center">Hubungi kami</h1>
+         <p class="py-3 text-center ">Kirimkan pertanyaan anda, Develepor akan merespons secepat kilat</p>
       </div>
-      <!-- end card memes -->
-
-      <div class="w-[385px] lg:w-[380px] h-[473px] border-2 dark:border-slate-800 rounded-md">
-         <!-- header card -->
-         <div class="flex items-center justify-between px-4 py-3 border-b dark:border-slate-800">
-            <div class="flex items-center gap-2">
-               <img src="../../../public/src/img/profile-user/profile.jpg" alt="profile" width="35" height="35"
-                  class="rounded-full aspect-square" />
-               <div class="text-sm">
-                  <h1 class="font-bold text-[16px]">Faqih</h1>
-                  <p>8 jam yang lalu</p>
+      <div class="border-2 rounded-lg shadow dark:border-slate-800">
+         <div class="px-6 py-4">
+            <form>
+               <div class="mb-6">
+                  <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama</label>
+                  <input type="text" id="email"
+                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                     placeholder="masukkan nama anda" required>
                </div>
-            </div>
-            <a href="">
-               <i class="ri-more-fill"></i>
-            </a>
-         </div>
-         <!-- end header card -->
-
-         <!-- memes image -->
-         <div style="
-                  background-image: url(../../../public/src/img/memes/memes2.jpg);
-               " class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
-         </div>
-         <!-- end meme image -->
-
-         <!-- caption -->
-         <div class="px-6 py-2">
-            <p>wkwkwk</p>
-         </div>
-         <!-- end caption -->
-
-         <!-- footer card -->
-         <div class="flex items-center justify-between px-6 py-3 border-t dark:border-slate-800">
-            <div class="flex items-center gap-4">
-               <div class="flex items-center gap-2">
-                  <i class="ri-heart-3-line text-[22px]"></i>
-                  <p>0</p>
+               <div class="mb-6">
+                  <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                     Email</label>
+                  <input type="email" id="email"
+                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                     placeholder="masukkan email anda" required>
                </div>
-               <div class="flex items-center gap-2">
-                  <i class="ri-chat-4-line text-[22px]"></i>
-                  <p>0</p>
+               <div class="mb-6">
+                  <label for="repeat-password"
+                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Subjek</label>
+                  <input type="text" id="subjek"
+                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                     placeholder="masukkan subjek anda" required>
                </div>
-            </div>
-            <div>
-               <a href=""><i class="ri-share-fill text-[20px]"></i></a>
-            </div>
+               <div class="mb-6">
+                  <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pesan</label>
+                  <textarea id="message" rows="4"
+                     class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                     placeholder="masukkan pesan anda"></textarea>
+               </div>
+               <button type="submit"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Kirim</button>
+            </form>
+
          </div>
-         <!-- end footer card -->
       </div>
-      <!-- end card memes -->
-
-      <div class="w-[385px] lg:w-[380px] h-[473px] border-2 dark:border-slate-800 rounded-md">
-         <!-- header card -->
-         <div class="flex items-center justify-between px-4 py-3 border-b dark:border-slate-800">
-            <div class="flex items-center gap-2">
-               <img src="../../../public/src/img/profile-user/profile.jpg" alt="profile" width="35" height="35"
-                  class="rounded-full aspect-square" />
-               <div class="text-sm">
-                  <h1 class="font-bold text-[16px]">Faqih</h1>
-                  <p>8 jam yang lalu</p>
-               </div>
-            </div>
-            <a href="">
-               <i class="ri-more-fill"></i>
-            </a>
-         </div>
-         <!-- end header card -->
-
-         <!-- memes image -->
-         <div style="
-                  background-image: url(../../../public/src/img/memes/memes3.png);
-               " class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
-         </div>
-         <!-- end meme image -->
-
-         <!-- caption -->
-         <div class="px-6 py-2">
-            <p>wkwkwk</p>
-         </div>
-         <!-- end caption -->
-
-         <!-- footer card -->
-         <div class="flex items-center justify-between px-6 py-3 border-t dark:border-slate-800">
-            <div class="flex items-center gap-4">
-               <div class="flex items-center gap-2">
-                  <i class="ri-heart-3-line text-[22px]"></i>
-                  <p>0</p>
-               </div>
-               <div class="flex items-center gap-2">
-                  <i class="ri-chat-4-line text-[22px]"></i>
-                  <p>0</p>
-               </div>
-            </div>
-            <div>
-               <a href=""><i class="ri-share-fill text-[20px]"></i></a>
-            </div>
-         </div>
-         <!-- end footer card -->
-      </div>
-      <!-- end card memes -->
-
-      <div class="w-[385px] lg:w-[380px] h-[473px] border-2 dark:border-slate-800 rounded-md">
-         <!-- header card -->
-         <div class="flex items-center justify-between px-4 py-3 border-b dark:border-slate-800">
-            <div class="flex items-center gap-2">
-               <img src="../../../public/src/img/profile-user/profile.jpg" alt="profile" width="35" height="35"
-                  class="rounded-full aspect-square" />
-               <div class="text-sm">
-                  <h1 class="font-bold text-[16px]">Faqih</h1>
-                  <p>8 jam yang lalu</p>
-               </div>
-            </div>
-            <a href="">
-               <i class="ri-more-fill"></i>
-            </a>
-         </div>
-         <!-- end header card -->
-
-         <!-- memes image -->
-         <div style="
-                  background-image: url(../../../public/src/img/memes/memes3.png);
-               " class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
-         </div>
-         <!-- end meme image -->
-
-         <!-- caption -->
-         <div class="px-6 py-2">
-            <p>wkwkwk</p>
-         </div>
-         <!-- end caption -->
-
-         <!-- footer card -->
-         <div class="flex items-center justify-between px-6 py-3 border-t dark:border-slate-800">
-            <div class="flex items-center gap-4">
-               <div class="flex items-center gap-2">
-                  <i class="ri-heart-3-line text-[22px]"></i>
-                  <p>0</p>
-               </div>
-               <div class="flex items-center gap-2">
-                  <i class="ri-chat-4-line text-[22px]"></i>
-                  <p>0</p>
-               </div>
-            </div>
-            <div>
-               <a href=""><i class="ri-share-fill text-[20px]"></i></a>
-            </div>
-         </div>
-         <!-- end footer card -->
-      </div>
-      <!-- end card memes -->
-
-      <div class="w-[385px] lg:w-[380px] h-[473px] border-2 dark:border-slate-800 rounded-md">
-         <!-- header card -->
-         <div class="flex items-center justify-between px-4 py-3 border-b dark:border-slate-800">
-            <div class="flex items-center gap-2">
-               <img src="../../../public/src/img/profile-user/profile.jpg" alt="profile" width="35" height="35"
-                  class="rounded-full aspect-square" />
-               <div class="text-sm">
-                  <h1 class="font-bold text-[16px]">Faqih</h1>
-                  <p>8 jam yang lalu</p>
-               </div>
-            </div>
-            <a href="">
-               <i class="ri-more-fill"></i>
-            </a>
-         </div>
-         <!-- end header card -->
-
-         <!-- memes image -->
-         <div style="
-                  background-image: url(../../../public/src/img/memes/memes2.jpg);
-               " class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
-         </div>
-         <!-- end meme image -->
-
-         <!-- caption -->
-         <div class="px-6 py-2">
-            <p>wkwkwk</p>
-         </div>
-         <!-- end caption -->
-
-         <!-- footer card -->
-         <div class="flex items-center justify-between px-6 py-3 border-t dark:border-slate-800">
-            <div class="flex items-center gap-4">
-               <div class="flex items-center gap-2">
-                  <i class="ri-heart-3-line text-[22px]"></i>
-                  <p>0</p>
-               </div>
-               <div class="flex items-center gap-2">
-                  <i class="ri-chat-4-line text-[22px]"></i>
-                  <p>0</p>
-               </div>
-            </div>
-            <div>
-               <a href=""><i class="ri-share-fill text-[20px]"></i></a>
-            </div>
-         </div>
-         <!-- end footer card -->
-      </div>
-      <!-- end card memes -->
-
-      <div class="w-[385px] lg:w-[380px] h-[473px] border-2 dark:border-slate-800 rounded-md">
-         <!-- header card -->
-         <div class="flex items-center justify-between px-4 py-3 border-b dark:border-slate-800">
-            <div class="flex items-center gap-2">
-               <img src="../../../public/src/img/profile-user/profile.jpg" alt="profile" width="35" height="35"
-                  class="rounded-full aspect-square" />
-               <div class="text-sm">
-                  <h1 class="font-bold text-[16px]">Faqih</h1>
-                  <p>8 jam yang lalu</p>
-               </div>
-            </div>
-            <a href="">
-               <i class="ri-more-fill"></i>
-            </a>
-         </div>
-         <!-- end header card -->
-
-         <!-- memes image -->
-         <div style="
-                  background-image: url(../../../public/src/img/memes/memes1.jpg);
-               " class="h-[280px] w-full bg-contain bg-no-repeat bg-center my-4">
-         </div>
-         <!-- end meme image -->
-
-         <!-- caption -->
-         <div class="px-6 py-2">
-            <p>wkwkwk</p>
-         </div>
-         <!-- end caption -->
-
-         <!-- footer card -->
-         <div class="flex items-center justify-between px-6 py-3 border-t dark:border-slate-800">
-            <div class="flex items-center gap-4">
-               <div class="flex items-center gap-2">
-                  <i class="ri-heart-3-line text-[22px]"></i>
-                  <p>0</p>
-               </div>
-               <div class="flex items-center gap-2">
-                  <i class="ri-chat-4-line text-[22px]"></i>
-                  <p>0</p>
-               </div>
-            </div>
-            <div>
-               <a href=""><i class="ri-share-fill text-[20px]"></i></a>
-            </div>
-         </div>
-         <!-- end footer card -->
-      </div>
-      <!-- end card memes -->
    </section>
-   <!-- * end content -->
+
+   <!-- * end section content -->
 
    <!-- * section modal -->
    <!-- modal more cards meme -->
@@ -382,7 +127,9 @@
             <!-- Modal header -->
             <div class="flex items-center justify-between p-5 border-b-2 rounded-t-2 dark:border-gray-600">
                <h3 class="text-xl font-medium text-gray-900 dark:text-white">
-                  <p class="text-gray-800 dark:text-gray-200">Menu Postingan</p>
+                  <p class="text-gray-800 dark:text-gray-200">
+                     Menu Postingan
+                  </p>
                </h3>
                <button type="button"
                   class="inline-flex items-center justify-center w-8 h-8 ml-auto text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
@@ -420,9 +167,11 @@
                <div class="relative">
                   <input type="search" id="search"
                      class="block w-full p-4 pl-5 text-sm text-gray-900 border border-gray-300 rounded-lg backdrop-blur-3xl bg-white/70 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700/70 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                     placeholder="Masukkan kata kunci" required>
+                     placeholder="Masukkan kata kunci" required />
                   <button type="submit"
-                     class="text-white absolute right-2.5 bottom-2.5 bg-softBlue hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-softBlue  dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                     class="text-white absolute right-2.5 bottom-2.5 bg-softBlue hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-softBlue dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Search
+                  </button>
                </div>
             </form>
          </div>
@@ -529,7 +278,9 @@
             <!-- Modal header -->
             <div class="flex items-center justify-between p-5 border-b-2 border-gray-400 dark:border-gray-600">
                <h3 class="text-xl font-medium text-gray-900 dark:text-white">
-                  <p class="text-gray-800 dark:text-gray-200">Posting Meme</p>
+                  <p class="text-gray-800 dark:text-gray-200">
+                     Posting Meme
+                  </p>
                </h3>
                <button type="button"
                   class="inline-flex items-center justify-center w-8 h-8 ml-auto text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
@@ -545,39 +296,51 @@
             <form action="">
                <div class="p-6">
                   <div class="flex flex-col justify-center w-full gap-y-3">
-                     <p class="text-lg font-medium text-gray-800 dark:text-gray-200">Pilih gambar <span
-                           class="text-red-700">*</span></p>
+                     <p class="text-lg font-medium text-gray-800 dark:text-gray-200">
+                        Pilih gambar <span class="text-red-700">*</span>
+                     </p>
                      <label for="dropzone-file"
                         class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 rounded-lg cursor-pointer bg-transparent dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600 overflow-auto scrollbar-w-1.5">
                         <div class="flex flex-col items-center justify-center pt-5 pb-6" id="upload-text">
                            <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
                               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                 stroke-width="2"
                                  d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
                            </svg>
-                           <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span
-                                 class="font-semibold text-center">Click to upload</span> or drag and drop</p>
-                           <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 5Mb)</p>
+                           <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                              <span class="font-semibold text-center">Click to upload</span>
+                              or drag and drop
+                           </p>
+                           <p class="text-xs text-gray-500 dark:text-gray-400">
+                              SVG, PNG, JPG or GIF (MAX. 5Mb)
+                           </p>
                         </div>
                         <input id="dropzone-file" type="file" class="hidden"
                            accept="image/png, image/jpeg, image/jpg, image/gif" onchange="previewFile(event)" />
                         <div id="image-preview" class="hidden">
-                           <img id="preview-img" src="#" alt="Preview" class="mx-auto " />
+                           <img id="preview-img" src="#" alt="Preview" class="mx-auto" />
                         </div>
                      </label>
                   </div>
-                  <button type="reset" onclick="deleteImage()"><i class="ri-delete-bin-7-fill text-[20px] absolute right-10 bottom-52 text-red-700 py-1 px-2 rounded-lg bg-gray-300"></i></button>
+                  <button type="reset" onclick="deleteImage()">
+                     <i
+                        class="ri-delete-bin-7-fill text-[20px] absolute right-10 bottom-52 text-red-700 py-1 px-2 rounded-lg bg-gray-300"></i>
+                  </button>
                   <div class="flex flex-col gap-y-3">
-                     <p class="text-lg font-medium text-gray-800 dark:text-gray-200">Caption Meme <span
-                           class="text-red-700">*</span></p>
+                     <p class="text-lg font-medium text-gray-800 dark:text-gray-200">
+                        Caption Meme <span class="text-red-700">*</span>
+                     </p>
                      <div class="mb-6">
                         <input type="text" id="default-input"
                            class="bg-transparent border-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                           placeholder="ketikkan caption kamu disini">
+                           placeholder="ketikkan caption kamu disini" />
                      </div>
                   </div>
                   <div class="flex justify-end">
-                     <button type="submit" class="py-2 bg-blue-700/60 rounded-lg border-gray-700 w-[90px] text-center">Posting</button>
+                     <button type="submit" class="py-2 bg-blue-700/60 rounded-lg border-gray-700 w-[90px] text-center">
+                        Posting
+                     </button>
                   </div>
                </div>
             </form>
@@ -586,7 +349,6 @@
    </div>
    <!-- end add modal -->
    <!-- * end section modal -->
-
 
    <!-- * section footer -->
    <footer

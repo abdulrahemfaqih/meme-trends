@@ -99,9 +99,9 @@
       transition: ease-out 0.3s;
    }
 
-   /* .floating3 {
+   .floating3 {
       animation: waves 3000ms infinite;
-   } */
+   }
 
    @keyframes faded {
       from {
@@ -136,6 +136,16 @@
 
    .animation-h1 {
       animation: faded2 3000ms ease-in;
+   }
+
+   .animation-faded {
+      animation: faded 2000ms ease-in;
+   }
+
+   .animation-profile {
+      animation:
+         faded 2000ms ease-in,
+         waves 3000ms infinite;
    }
 
    .animation-hero-img {
