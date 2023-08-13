@@ -1,4 +1,4 @@
-<!doctype html >
+<!doctype html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -15,17 +15,10 @@
    <!-- icon -->
    <link rel="shortcut icon" href="../../../public/src/img/icon/icon-dark.svg" type="image/x-icon" />
    <title>Meme Verse</title>
-   <script>
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-         document.documentElement.classList.add('dark')
-      } else {
-         document.documentElement.classList.remove('dark')
-      }
-   </script>
    <style>
       /* * {
-            border: 1px solid rgb(196, 196, 196);
-         } */
+         border: 1px solid rgb(196, 196, 196);
+      } */
    </style>
 </head>
 
@@ -33,11 +26,12 @@
    <!-- * section navbar -->
    <nav class="sticky top-[-1px] transition-all ease-in-out duration-300" id="navbar">
       <div
-         class=" bg-white/70 backdrop-blur-lg w-full py-[15px] lg:py-[18px] dark:bg-dark/50 border-b border-slate-200 dark:border-slate-800">
+         class="bg-white/70 backdrop-blur-lg w-full py-[15px] lg:py-[18px] dark:bg-dark/50 border-b dark:border-slate-800 ">
          <div class="container flex items-center justify-between">
             <!-- logo -->
             <div class="flex items-center gap-1 lg:gap-2">
-               <img src="../../../public/src/img/icon/icon.svg" alt="logo" class="icon-light w-[35px] lg:w-[40px]" />
+               <img src="../../../public/src/img/icon/icon-dark.svg" alt="logo"
+                  class="icon-light w-[35px] lg:w-[40px]" />
                <img src="../../../public/src/img/icon/icon-dark.svg" class="icon-dark w-[35px] lg:w-[40px] hidden"
                   alt="logo" />
                <h1 class="font-semibold text-[20px] lg:text-[24px]">
@@ -53,12 +47,11 @@
                      <i class="ri-search-line text-[22px]"></i>
                   </button>
                   <!-- end modal search -->
-                  <label for="darkModeToggle"
-                     class="px-2 border-2 border-gray-200 rounded-md toogle dark:border-gray-700">
+                  <div for="darkModeToggle"
+                     class="px-2 border-2 border-gray-200 rounded-md cursor-pointer toogle dark:border-gray-700">
                      <i class="ri-moon-fill text-[20px] moon"></i>
-                     <input type="checkbox" id="darkModeToggle" class="hidden" />
-                     <i class="ri-sun-fill text-[20px] sun hidden"></i>
-                  </label>
+                     <i class="ri-sun-fill text-[20px] sun display-none"></i>
+                  </div>
                </div>
             </div>
             <!-- end menu -->
@@ -586,7 +579,6 @@
    </div>
    <!-- end add modal -->
    <!-- * end section modal -->
-
 
    <!-- * section footer -->
    <footer

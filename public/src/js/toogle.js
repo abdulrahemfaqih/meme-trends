@@ -1,35 +1,48 @@
-const html = document.querySelector("html");
-const sun = document.querySelector(".sun");
-const moon = document.querySelector(".moon");
-const iconLight = document.querySelector(".icon-light");
-const iconDark = document.querySelector(".icon-dark");
-const toogle = document.querySelector("#darkModeToggle");
+const sunIcon = document.querySelector(".sun");
+const moonIcon = document.querySelector(".moon");
 
-toogle.addEventListener("change", () => {
-   if (toogle.checked) {
-      html.classList.add("dark");
-      moon.classList.add("hidden");
-      sun.classList.remove("hidden");
-      iconLight.classList.add("hidden");
-      iconDark.classList.remove("hidden");
-      localStorage.theme = "dark";
-   } else {
-      html.classList.remove("dark");
-      sun.classList.add("hidden");
-      moon.classList.remove("hidden");
-      iconDark.classList.add("hidden");
-      iconLight.classList.remove("hidden");
-      localStorage.theme = "light";
+// theme variable
+const userTheme = localStorage.getItem("theme");
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+// icon toggling
+const iconToggle = () => {
+   moonIcon.classList.toggle("display-none");
+   sunIcon.classList.toggle("display-none");
+};
+
+// initial theme
+const themeCheck = () => {
+   if (userTheme === "dark" || (!userTheme && systemTheme)) {
+      document.documentElement.classList.add("dark");
+      sunIcon.classList.remove("display-none");
+      moonIcon.classList.add("display-none");
+      return;
    }
+   document.documentElement.classList.remove("dark");
+   sunIcon.classList.add("display-none");
+   moonIcon.classList.remove("display-none");
+};
+
+// manual theme switch
+const themeSwitch = () => {
+   if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+   } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+   }
+   iconToggle();
+};
+
+// call theme switch on buttons
+sunIcon.addEventListener("click", () => {
+   themeSwitch();
+});
+moonIcon.addEventListener("click", () => {
+   themeSwitch();
 });
 
-// set toogle sesuai mode
-if (
-   localStorage.theme === "dark" ||
-   (!("theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
-) {
-   toogle.checked = true;
-} else {
-   toogle.checked = false;
-}
+// invoke theme check on initial load
+themeCheck();

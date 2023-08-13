@@ -14,7 +14,11 @@
 
 @layer utilities {
    .all-center {
-      @apply flex justify-center items-center;
+      @apply flex items-center justify-center;
+   }
+
+   .display-none {
+      @apply hidden;
    }
 
    @keyframes floatL {
