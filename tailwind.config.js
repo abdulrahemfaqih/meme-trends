@@ -23,7 +23,9 @@ module.exports = {
             "2xl": "1260px",
          },
          colors: {
-            dark: "#0A1219",
+            dark: "#111827",
+            softDark: "#1F2937",
+            borderDark: "#4B5563",
             softBlue: "#366998",
             darkBlue: "#134A7D",
          },

@@ -14,8 +14,6 @@ function previewFile(event) {
          preview.style.display = "block";
       };
 
-
-
       reader.readAsDataURL(file);
    }
 }

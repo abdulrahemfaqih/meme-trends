@@ -17,6 +17,11 @@
       @apply flex items-center justify-center;
    }
 
+   .custom-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+  }
+
+
    .display-none {
       @apply hidden;
    }
