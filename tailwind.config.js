@@ -28,6 +28,7 @@ module.exports = {
             borderDark: "#4B5563",
             softBlue: "#366998",
             darkBlue: "#134A7D",
+            coolWhite: "rgb(248,249,250)",
          },
       },
    },
